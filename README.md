@@ -51,8 +51,8 @@ build and publishes that verified artifact to Pages.
 - Warranty examples queue invoices, part identities, installation/removal records
   and contract terms. They do not approve claims or book recovery.
 
-This is an independent engineering study, not airline employment, approved
-maintenance data, an airworthiness determination, an AMOC or a maintenance release.
+This is an independent engineering study. It does not supply approved maintenance
+data, an airworthiness determination, an AMOC or a maintenance release.
 The public source and invented planning assumptions are identified in every output.
 
 [Public AD source and paragraph notes](data/ad_2026_09_01.json) ·

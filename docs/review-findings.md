@@ -25,6 +25,6 @@ Artifact checks verify the source snapshot checksum, unresolved actual bulletin
 membership, report totals and absence of approval/recovery claims.
 
 The code uses explicit reviewed predicates. It does not extract executable rules
-from prose, infer serial effectivity or interpret an SB it has not read. The small
-standard-library core is deliberate: introducing document-search or language-model
-services would not supply the missing controlled evidence.
+from prose, infer serial effectivity or interpret an SB it has not read. The
+standard-library core keeps rule evaluation and evidence inspection local. Missing
+controlled evidence still has to be obtained from the applicable source.
