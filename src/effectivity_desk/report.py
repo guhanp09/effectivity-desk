@@ -18,10 +18,14 @@ def table(rows, fields):
     result += "".join(f"<th scope='col'>{escape(label)}</th>" for _, label in fields)
     result += "</tr></thead><tbody>"
     for row in rows:
+        display = dict(row)
+        for key, value in display.items():
+            if isinstance(value, float):
+                display[key] = f"{value:,.2f}" if key.endswith("_usd") else f"{value:.3f}"
         result += (
             "<tr>"
             + "".join(
-                "<td>" + escape("—" if row.get(key) is None else str(row[key])) + "</td>"
+                "<td>" + escape("—" if display.get(key) is None else str(display[key])) + "</td>"
                 for key, _ in fields
             )
             + "</tr>"
