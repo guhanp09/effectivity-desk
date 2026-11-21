@@ -1,0 +1,16 @@
+{
+  "as_of": "2026-11-21",
+  "inputs": {
+    "ad_2026_09_01.json": "4f505e759717391ca026b5daf216ba0e2e2a59e8bc078931288f828e5890c120",
+    "sources/ad-2026-09-01.pdf": "4006799c9fb5108e66fc8ca0ea3dae99e76a7c65f01ef3d7043be7b3e0e02dce",
+    "synthetic_review.json": "21670c16a819f2791fb222411616a9692310ee37eae244fa38541636fbeb2931"
+  },
+  "outputs": {
+    "index.html": "335aea0b76791237de6bf594f7060cf91b2f519af2a69fe6aa4fa58d90dca8b6",
+    "public_ad_scope_review.csv": "0d43e85c16042a6e6a2596b0806149ab98ebd227359ab274f1559082bc9d6d5d",
+    "review.json": "2edbd4ca28b3bbfa7362dba1ff6b1a84d55e5a6baf4ad7aadd20cd37afaa217f",
+    "synthetic_effectivity.csv": "6e90a605022fdf42edbf2c81ae8dfd4a7219011bc524e11fac80680fc21f7065",
+    "synthetic_options.csv": "9c6525228619fc029d69b27a4b1023bfb9cd4b1ee95eee3969407a5a33c97a40",
+    "synthetic_warranty.csv": "24ec9891e13cbd3458c5ae62b2421f2ef593c5bd7a0060edfa9a6b85d4c78c9d"
+  }
+}

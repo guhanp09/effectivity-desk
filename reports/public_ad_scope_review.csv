@@ -1,0 +1,10 @@
+case,review_scope,state,reason
+ILLUSTRATION-7878,paragraph(c) overall effectivity,UNKNOWN,asset.model: matches; asset.rb380021_issue001_membership: missing
+ILLUSTRATION-7878,paragraph(j) new actions,UNKNOWN,asset.rb250299_issue002_membership: missing
+ILLUSTRATION-7878,paragraph(m) location-specific installation prohibition,UNKNOWN,asset.proposed_part: matches; asset.same_location_previously_replaced_by_new_part: missing
+ILLUSTRATION-78710,paragraph(c) overall effectivity,UNKNOWN,asset.model: matches; asset.rb380021_issue001_membership: missing
+ILLUSTRATION-78710,paragraph(j) new actions,UNKNOWN,asset.rb250299_issue002_membership: missing
+ILLUSTRATION-78710,paragraph(m) location-specific installation prohibition,MATCH,asset.proposed_part: matches; asset.same_location_previously_replaced_by_new_part: matches
+ILLUSTRATION-INCOMPLETE,paragraph(c) overall effectivity,UNKNOWN,asset.model: missing; asset.rb380021_issue001_membership: missing
+ILLUSTRATION-INCOMPLETE,paragraph(j) new actions,UNKNOWN,asset.rb250299_issue002_membership: missing
+ILLUSTRATION-INCOMPLETE,paragraph(m) location-specific installation prohibition,UNKNOWN,asset.proposed_part: missing; asset.same_location_previously_replaced_by_new_part: missing

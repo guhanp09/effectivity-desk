@@ -1,0 +1,5 @@
+option,basis,cost_usd,benefit_npv_usd,completion_day,status
+Line window,synthetic planning assumptions,1640.0,-995.73,5.333333333333333,feasible assumed scope
+Base window,synthetic planning assumptions,1390.0,-745.73,9.166666666666666,feasible assumed scope
+Late low-cost window,synthetic planning assumptions,670.0,-25.73,30.041666666666668,excluded: completes after due date
+Unquoted parts,synthetic planning assumptions,,,,blocked: Missing parts cost

@@ -1,0 +1,72 @@
+{
+  "provenance": "Entirely synthetic documents, assets, installed parts, dates, costs and contract records. No real fleet configuration or approved maintenance scope.",
+  "documents": [
+    {
+      "document_id": "SB-SIM-PUMP-01", "revision": 1,
+      "issued_at": "2026-08-20", "effective_at": "2026-09-01",
+      "rule": {"all": [
+        {"in": {"model": ["SIM-A", "SIM-B"]}},
+        {"range": {"airframe_serial": [100, 149]}},
+        {"component": {"all": [
+          {"in": {"part_number": ["PUMP-1", "PUMP-2"]}},
+          {"range": {"serial": [500, 599]}},
+          {"in": {"position": ["LEFT"]}}
+        ]}}
+      ]}
+    },
+    {
+      "document_id": "SB-SIM-PUMP-01", "revision": 2,
+      "issued_at": "2026-11-10", "effective_at": "2026-11-15",
+      "rule": {"all": [
+        {"in": {"model": ["SIM-A", "SIM-B"]}},
+        {"range": {"airframe_serial": [100, 199]}},
+        {"component": {"all": [
+          {"in": {"part_number": ["PUMP-1", "PUMP-2"]}},
+          {"range": {"serial": [500, 599]}},
+          {"in": {"position": ["LEFT"]}}
+        ]}}
+      ]}
+    },
+    {
+      "document_id": "SB-SIM-PUMP-01", "revision": 3,
+      "issued_at": "2026-12-15", "effective_at": "2027-01-01",
+      "rule": {"in": {"model": ["SIM-C"]}}
+    }
+  ],
+  "assets": [
+    {"id": "SIM-01", "model": "SIM-A", "airframe_serial": 100, "components_complete": true,
+     "components": [{"part_number": "PUMP-1", "serial": 500, "position": "LEFT"}]},
+    {"id": "SIM-02", "model": "SIM-A", "airframe_serial": 200, "components_complete": true,
+     "components": [{"part_number": "PUMP-1", "serial": 500, "position": "LEFT"}]},
+    {"id": "SIM-03", "model": "SIM-A", "airframe_serial": null, "components_complete": true,
+     "components": [{"part_number": "PUMP-1", "serial": 520, "position": "LEFT"}]},
+    {"id": "SIM-04", "model": "SIM-A", "airframe_serial": 160, "components_complete": true,
+     "components": [{"part_number": "PUMP-1", "serial": 700, "position": "LEFT"},
+                    {"part_number": "PUMP-9", "serial": 550, "position": "LEFT"}]},
+    {"id": "SIM-05", "model": "SIM-B", "airframe_serial": 160, "components_complete": false,
+     "components": [{"part_number": "PUMP-9", "serial": 550, "position": "LEFT"}]},
+    {"id": "SIM-06", "model": "SIM-A", "airframe_serial": 199, "components_complete": true,
+     "components": [{"part_number": "PUMP-2", "serial": null, "position": "LEFT"}]},
+    {"id": "SIM-07", "model": "SIM-C", "airframe_serial": null, "components_complete": false},
+    {"id": "SIM-08", "model": "SIM-A", "airframe_serial": 140, "components_complete": true,
+     "components": [{"part_number": "PUMP-1", "serial": 510, "position": "RIGHT"}]},
+    {"id": "SIM-09", "model": null, "airframe_serial": 140, "components_complete": true,
+     "components": [{"part_number": "PUMP-1", "serial": 510, "position": "LEFT"}]}
+  ],
+  "planning": {
+    "mandatory": true, "due_in_days": 14,
+    "applicability_confirmed": true, "approved_scope_available": true, "authorized_review": true,
+    "avoided_events_per_year": 0.25, "cost_per_event": 1000, "discount_rate": 0.08, "years": 3,
+    "options": [
+      {"name": "Line window", "day": 5, "labor_hours": 4, "labor_rate": 85, "parts_cost": 500, "downtime_hours": 8, "downtime_rate": 100},
+      {"name": "Base window", "day": 9, "labor_hours": 6, "labor_rate": 85, "parts_cost": 480, "downtime_hours": 4, "downtime_rate": 100},
+      {"name": "Late low-cost window", "day": 30, "labor_hours": 2, "labor_rate": 85, "parts_cost": 400, "downtime_hours": 1, "downtime_rate": 100},
+      {"name": "Unquoted parts", "day": 3, "labor_hours": 4, "labor_rate": 85, "parts_cost": null, "downtime_hours": 4, "downtime_rate": 100}
+    ]
+  },
+  "warranty": [
+    {"id": "CLAIM-SIM-01", "part_number": "PUMP-1", "serial_number": "550", "invoice": "INV-SIM-1", "installation_record": "INSTALL-SIM-1", "removal_record": "REMOVE-SIM-1", "contract_terms": null, "within_terms": null},
+    {"id": "CLAIM-SIM-02", "part_number": "PUMP-1", "serial_number": "551", "invoice": "INV-SIM-2", "installation_record": "INSTALL-SIM-2", "removal_record": "REMOVE-SIM-2", "contract_terms": "CONTRACT-SIM-1", "within_terms": true},
+    {"id": "CLAIM-SIM-03", "part_number": "PUMP-2", "serial_number": "552", "invoice": "INV-SIM-3", "installation_record": "INSTALL-SIM-3", "removal_record": "REMOVE-SIM-3", "contract_terms": "CONTRACT-SIM-1", "within_terms": false}
+  ]
+}

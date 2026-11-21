@@ -1,0 +1,110 @@
+{
+  "title": "FAA AD 2026-09-01",
+  "url": "https://www.govinfo.gov/content/pkg/FR-2026-04-29/pdf/2026-08306.pdf",
+  "retrieved_at_utc": "2026-11-21",
+  "effective_date": "2026-06-03",
+  "snapshot_file": "sources/ad-2026-09-01.pdf",
+  "sha256": "4006799c9fb5108e66fc8ca0ea3dae99e76a7c65f01ef3d7043be7b3e0e02dce",
+  "currency": "Historical captured public document, not an authoritative current AD/SB/AMOC corpus.",
+  "incorporated_material": "Boeing Requirements Bulletins are referenced but their complete effectivity tables, procedures and timing are not available here.",
+  "review_notes": [
+    {
+      "paragraph": "(c), (g), (h)",
+      "interpretation": "787-8/-9/-10 model scope remains conditional on the referenced 2022 Requirements Bulletin. The retained reference-date exception uses June 29, 2023; do not substitute the new AD date throughout."
+    },
+    {
+      "paragraph": "(j), (k)",
+      "interpretation": "New actions depend on the 2025 Issue 002 Requirements Bulletin. The specified Issue 001 date reference is replaced by June 3, 2026; other timing details require the incorporated document."
+    },
+    {
+      "paragraph": "(l)",
+      "interpretation": "Completion of the new actions terminates retained paragraph (g) only for the airplanes identified in the new Requirements Bulletin. A new revision is not blanket closeout evidence."
+    },
+    {
+      "paragraph": "(m)",
+      "interpretation": "The old-part installation prohibition is conditional on prior replacement at the same inspection location. A 787-10 cannot be dismissed just because the new-inspection discussion concerns 787-8/-9."
+    },
+    {
+      "paragraph": "(i), discussion of previous-action credit",
+      "interpretation": "Retained credit has explicit scope and dates. The public discussion rejects automatic credit for the earlier Issue 001 new-action bulletin; no generic old-revision credit is assumed."
+    },
+    {
+      "paragraph": "(n)",
+      "interpretation": "AMOC approval belongs to the specified FAA authority or authorized ODA under the AD provisions. This software has no approval or maintenance-release function."
+    }
+  ],
+  "public_rules": {
+    "paragraph(c) overall effectivity": {
+      "all": [
+        {
+          "in": {
+            "model": [
+              "787-8",
+              "787-9",
+              "787-10"
+            ]
+          }
+        },
+        {
+          "in": {
+            "rb380021_issue001_membership": [
+              "verified yes"
+            ]
+          }
+        }
+      ]
+    },
+    "paragraph(j) new actions": {
+      "in": {
+        "rb250299_issue002_membership": [
+          "verified yes"
+        ]
+      }
+    },
+    "paragraph(m) location-specific installation prohibition": {
+      "all": [
+        {
+          "in": {
+            "proposed_part": [
+              "14C02-08C",
+              "14C02-08A"
+            ]
+          }
+        },
+        {
+          "in": {
+            "same_location_previously_replaced_by_new_part": [
+              "verified yes"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "review_cases": [
+    {
+      "id": "ILLUSTRATION-7878",
+      "model": "787-8",
+      "rb380021_issue001_membership": null,
+      "rb250299_issue002_membership": null,
+      "proposed_part": "14C02-08C",
+      "same_location_previously_replaced_by_new_part": null
+    },
+    {
+      "id": "ILLUSTRATION-78710",
+      "model": "787-10",
+      "rb380021_issue001_membership": null,
+      "rb250299_issue002_membership": null,
+      "proposed_part": "14C02-08C",
+      "same_location_previously_replaced_by_new_part": "verified yes"
+    },
+    {
+      "id": "ILLUSTRATION-INCOMPLETE",
+      "model": null,
+      "rb380021_issue001_membership": null,
+      "rb250299_issue002_membership": null,
+      "proposed_part": null,
+      "same_location_previously_replaced_by_new_part": null
+    }
+  ]
+}

@@ -1,0 +1,366 @@
+{
+  "as_of": "2026-11-21",
+  "source_snapshot": {
+    "title": "FAA AD 2026-09-01",
+    "url": "https://www.govinfo.gov/content/pkg/FR-2026-04-29/pdf/2026-08306.pdf",
+    "retrieved_at_utc": "2026-11-21",
+    "effective_date": "2026-06-03",
+    "snapshot_file": "sources/ad-2026-09-01.pdf",
+    "sha256": "4006799c9fb5108e66fc8ca0ea3dae99e76a7c65f01ef3d7043be7b3e0e02dce",
+    "currency": "Historical captured public document, not an authoritative current AD/SB/AMOC corpus.",
+    "incorporated_material": "Boeing Requirements Bulletins are referenced but their complete effectivity tables, procedures and timing are not available here.",
+    "review_notes": [
+      {
+        "paragraph": "(c), (g), (h)",
+        "interpretation": "787-8/-9/-10 model scope remains conditional on the referenced 2022 Requirements Bulletin. The retained reference-date exception uses June 29, 2023; do not substitute the new AD date throughout."
+      },
+      {
+        "paragraph": "(j), (k)",
+        "interpretation": "New actions depend on the 2025 Issue 002 Requirements Bulletin. The specified Issue 001 date reference is replaced by June 3, 2026; other timing details require the incorporated document."
+      },
+      {
+        "paragraph": "(l)",
+        "interpretation": "Completion of the new actions terminates retained paragraph (g) only for the airplanes identified in the new Requirements Bulletin. A new revision is not blanket closeout evidence."
+      },
+      {
+        "paragraph": "(m)",
+        "interpretation": "The old-part installation prohibition is conditional on prior replacement at the same inspection location. A 787-10 cannot be dismissed just because the new-inspection discussion concerns 787-8/-9."
+      },
+      {
+        "paragraph": "(i), discussion of previous-action credit",
+        "interpretation": "Retained credit has explicit scope and dates. The public discussion rejects automatic credit for the earlier Issue 001 new-action bulletin; no generic old-revision credit is assumed."
+      },
+      {
+        "paragraph": "(n)",
+        "interpretation": "AMOC approval belongs to the specified FAA authority or authorized ODA under the AD provisions. This software has no approval or maintenance-release function."
+      }
+    ],
+    "public_rules": {
+      "paragraph(c) overall effectivity": {
+        "all": [
+          {
+            "in": {
+              "model": [
+                "787-8",
+                "787-9",
+                "787-10"
+              ]
+            }
+          },
+          {
+            "in": {
+              "rb380021_issue001_membership": [
+                "verified yes"
+              ]
+            }
+          }
+        ]
+      },
+      "paragraph(j) new actions": {
+        "in": {
+          "rb250299_issue002_membership": [
+            "verified yes"
+          ]
+        }
+      },
+      "paragraph(m) location-specific installation prohibition": {
+        "all": [
+          {
+            "in": {
+              "proposed_part": [
+                "14C02-08C",
+                "14C02-08A"
+              ]
+            }
+          },
+          {
+            "in": {
+              "same_location_previously_replaced_by_new_part": [
+                "verified yes"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "review_cases": [
+      {
+        "id": "ILLUSTRATION-7878",
+        "model": "787-8",
+        "rb380021_issue001_membership": null,
+        "rb250299_issue002_membership": null,
+        "proposed_part": "14C02-08C",
+        "same_location_previously_replaced_by_new_part": null
+      },
+      {
+        "id": "ILLUSTRATION-78710",
+        "model": "787-10",
+        "rb380021_issue001_membership": null,
+        "rb250299_issue002_membership": null,
+        "proposed_part": "14C02-08C",
+        "same_location_previously_replaced_by_new_part": "verified yes"
+      },
+      {
+        "id": "ILLUSTRATION-INCOMPLETE",
+        "model": null,
+        "rb380021_issue001_membership": null,
+        "rb250299_issue002_membership": null,
+        "proposed_part": null,
+        "same_location_previously_replaced_by_new_part": null
+      }
+    ]
+  },
+  "synthetic_document": {
+    "document_id": "SB-SIM-PUMP-01",
+    "revision": 2,
+    "issued_at": "2026-11-10",
+    "effective_at": "2026-11-15",
+    "rule": {
+      "all": [
+        {
+          "in": {
+            "model": [
+              "SIM-A",
+              "SIM-B"
+            ]
+          }
+        },
+        {
+          "range": {
+            "airframe_serial": [
+              100,
+              199
+            ]
+          }
+        },
+        {
+          "component": {
+            "all": [
+              {
+                "in": {
+                  "part_number": [
+                    "PUMP-1",
+                    "PUMP-2"
+                  ]
+                }
+              },
+              {
+                "range": {
+                  "serial": [
+                    500,
+                    599
+                  ]
+                }
+              },
+              {
+                "in": {
+                  "position": [
+                    "LEFT"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "synthetic_reviews": [
+    {
+      "asset": "SIM-01",
+      "revision": 2,
+      "state": "MATCH",
+      "reason": "asset.model: matches; asset.airframe_serial: matches; asset.components[0].part_number: matches; asset.components[0].serial: matches; asset.components[0].position: matches",
+      "document_sha256": "c10beb189b5b87e2bfb5ecd8123fa005e40d37bc9145ae749fa4bc6ff87a416c",
+      "configuration_sha256": "d1e35792f4c3e6d4c5685ea96c815b78159a0d8d43bacbed2cdd77ccfe76f531"
+    },
+    {
+      "asset": "SIM-02",
+      "revision": 2,
+      "state": "NO_MATCH",
+      "reason": "asset.model: matches; asset.airframe_serial: outside known scope; asset.components[0].part_number: matches; asset.components[0].serial: matches; asset.components[0].position: matches",
+      "document_sha256": "c10beb189b5b87e2bfb5ecd8123fa005e40d37bc9145ae749fa4bc6ff87a416c",
+      "configuration_sha256": "df19b2d3da8015999983ffcedd94e8945898922fbad9cff466b6926da06e4ee7"
+    },
+    {
+      "asset": "SIM-03",
+      "revision": 2,
+      "state": "UNKNOWN",
+      "reason": "asset.model: matches; asset.airframe_serial: missing; asset.components[0].part_number: matches; asset.components[0].serial: matches; asset.components[0].position: matches",
+      "document_sha256": "c10beb189b5b87e2bfb5ecd8123fa005e40d37bc9145ae749fa4bc6ff87a416c",
+      "configuration_sha256": "9d99ee6f2d952fc506471fbfe69aacdcb6bf04f033e7a1db8f1c548f6e13cc8e"
+    },
+    {
+      "asset": "SIM-04",
+      "revision": 2,
+      "state": "NO_MATCH",
+      "reason": "asset.model: matches; asset.airframe_serial: matches; asset.components[0].part_number: matches; asset.components[0].serial: outside known scope; asset.components[0].position: matches; asset.components[1].part_number: outside known scope; asset.components[1].serial: matches; asset.components[1].position: matches",
+      "document_sha256": "c10beb189b5b87e2bfb5ecd8123fa005e40d37bc9145ae749fa4bc6ff87a416c",
+      "configuration_sha256": "e85f0b1d45b46a6248ad11a2c3d8fd7e37f2e4dedb9417bd1ad99a5dd07ceb36"
+    },
+    {
+      "asset": "SIM-05",
+      "revision": 2,
+      "state": "UNKNOWN",
+      "reason": "asset.model: matches; asset.airframe_serial: matches; asset.components[0].part_number: outside known scope; asset.components[0].serial: matches; asset.components[0].position: matches; asset: inventory incomplete",
+      "document_sha256": "c10beb189b5b87e2bfb5ecd8123fa005e40d37bc9145ae749fa4bc6ff87a416c",
+      "configuration_sha256": "dcb2622f9f71960dfe984bffd56b01681bd92a9fd1f4be2ea289655d85cac5e3"
+    },
+    {
+      "asset": "SIM-06",
+      "revision": 2,
+      "state": "UNKNOWN",
+      "reason": "asset.model: matches; asset.airframe_serial: matches; asset.components[0].part_number: matches; asset.components[0].serial: missing; asset.components[0].position: matches",
+      "document_sha256": "c10beb189b5b87e2bfb5ecd8123fa005e40d37bc9145ae749fa4bc6ff87a416c",
+      "configuration_sha256": "86eb512604485ed8b1b2406ea7951fc3abdf838b619c47e500eb299018d77ea7"
+    },
+    {
+      "asset": "SIM-07",
+      "revision": 2,
+      "state": "NO_MATCH",
+      "reason": "asset.model: outside known scope; asset.airframe_serial: missing; asset.components: inventory missing",
+      "document_sha256": "c10beb189b5b87e2bfb5ecd8123fa005e40d37bc9145ae749fa4bc6ff87a416c",
+      "configuration_sha256": "0f8db111242cbf1f6d7c8eeab5861ecf8e638424fe9e1f11be6d087e27a5bf95"
+    },
+    {
+      "asset": "SIM-08",
+      "revision": 2,
+      "state": "NO_MATCH",
+      "reason": "asset.model: matches; asset.airframe_serial: matches; asset.components[0].part_number: matches; asset.components[0].serial: matches; asset.components[0].position: outside known scope",
+      "document_sha256": "c10beb189b5b87e2bfb5ecd8123fa005e40d37bc9145ae749fa4bc6ff87a416c",
+      "configuration_sha256": "ffea825d15aaa2d6880b03518e7741b87fc66fe7eb18d51615a4788d54ffaad4"
+    },
+    {
+      "asset": "SIM-09",
+      "revision": 2,
+      "state": "UNKNOWN",
+      "reason": "asset.model: missing; asset.airframe_serial: matches; asset.components[0].part_number: matches; asset.components[0].serial: matches; asset.components[0].position: matches",
+      "document_sha256": "c10beb189b5b87e2bfb5ecd8123fa005e40d37bc9145ae749fa4bc6ff87a416c",
+      "configuration_sha256": "2ceeb7a31834c199b7bc3d53cba68f453def48e7e1c4565c87339bc81932807e"
+    }
+  ],
+  "state_counts": {
+    "MATCH": 1,
+    "NO_MATCH": 4,
+    "UNKNOWN": 4
+  },
+  "public_ad_case_reviews": [
+    {
+      "case": "ILLUSTRATION-7878",
+      "review_scope": "paragraph(c) overall effectivity",
+      "state": "UNKNOWN",
+      "reason": "asset.model: matches; asset.rb380021_issue001_membership: missing"
+    },
+    {
+      "case": "ILLUSTRATION-7878",
+      "review_scope": "paragraph(j) new actions",
+      "state": "UNKNOWN",
+      "reason": "asset.rb250299_issue002_membership: missing"
+    },
+    {
+      "case": "ILLUSTRATION-7878",
+      "review_scope": "paragraph(m) location-specific installation prohibition",
+      "state": "UNKNOWN",
+      "reason": "asset.proposed_part: matches; asset.same_location_previously_replaced_by_new_part: missing"
+    },
+    {
+      "case": "ILLUSTRATION-78710",
+      "review_scope": "paragraph(c) overall effectivity",
+      "state": "UNKNOWN",
+      "reason": "asset.model: matches; asset.rb380021_issue001_membership: missing"
+    },
+    {
+      "case": "ILLUSTRATION-78710",
+      "review_scope": "paragraph(j) new actions",
+      "state": "UNKNOWN",
+      "reason": "asset.rb250299_issue002_membership: missing"
+    },
+    {
+      "case": "ILLUSTRATION-78710",
+      "review_scope": "paragraph(m) location-specific installation prohibition",
+      "state": "MATCH",
+      "reason": "asset.proposed_part: matches; asset.same_location_previously_replaced_by_new_part: matches"
+    },
+    {
+      "case": "ILLUSTRATION-INCOMPLETE",
+      "review_scope": "paragraph(c) overall effectivity",
+      "state": "UNKNOWN",
+      "reason": "asset.model: missing; asset.rb380021_issue001_membership: missing"
+    },
+    {
+      "case": "ILLUSTRATION-INCOMPLETE",
+      "review_scope": "paragraph(j) new actions",
+      "state": "UNKNOWN",
+      "reason": "asset.rb250299_issue002_membership: missing"
+    },
+    {
+      "case": "ILLUSTRATION-INCOMPLETE",
+      "review_scope": "paragraph(m) location-specific installation prohibition",
+      "state": "UNKNOWN",
+      "reason": "asset.proposed_part: missing; asset.same_location_previously_replaced_by_new_part: missing"
+    }
+  ],
+  "synthetic_planning": {
+    "options": [
+      {
+        "option": "Line window",
+        "basis": "synthetic planning assumptions",
+        "cost_usd": 1640.0,
+        "benefit_npv_usd": -995.73,
+        "completion_day": 5.333333333333333,
+        "status": "feasible assumed scope"
+      },
+      {
+        "option": "Base window",
+        "basis": "synthetic planning assumptions",
+        "cost_usd": 1390.0,
+        "benefit_npv_usd": -745.73,
+        "completion_day": 9.166666666666666,
+        "status": "feasible assumed scope"
+      },
+      {
+        "option": "Late low-cost window",
+        "basis": "synthetic planning assumptions",
+        "cost_usd": 670.0,
+        "benefit_npv_usd": -25.73,
+        "completion_day": 30.041666666666668,
+        "status": "excluded: completes after due date"
+      },
+      {
+        "option": "Unquoted parts",
+        "basis": "synthetic planning assumptions",
+        "cost_usd": null,
+        "benefit_npv_usd": null,
+        "completion_day": null,
+        "status": "blocked: Missing parts cost"
+      }
+    ],
+    "candidate_for_review": "Base window",
+    "release_authority": null,
+    "note": "Illustrative comparison, conditional on scope and evidence. No operational approval."
+  },
+  "synthetic_warranty": [
+    {
+      "case": "CLAIM-SIM-01",
+      "state": "evidence needed",
+      "missing": [
+        "contract_terms"
+      ],
+      "recovery_usd": null
+    },
+    {
+      "case": "CLAIM-SIM-02",
+      "state": "candidate for contract review",
+      "missing": [],
+      "recovery_usd": null
+    },
+    {
+      "case": "CLAIM-SIM-03",
+      "state": "outside supplied terms; review exceptions",
+      "missing": [],
+      "recovery_usd": null
+    }
+  ],
+  "approval": null,
+  "currency": "Known local snapshot only; not a search of all current ADs, AMOCs or SB revisions."
+}
