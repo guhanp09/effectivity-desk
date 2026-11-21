@@ -17,6 +17,7 @@ future revisions, and allowing financial convenience to override technical gates
 | Mandatory scope has negative assumed NPV | Still constrained by the due date; no economic-deferral recommendation |
 | Quote missing or technical gate unresolved | No financial implementation candidate |
 | Warranty packet complete | Candidate for contract review only; no recovery booked |
+| A table overflows a narrow viewport | Labeled, keyboard-focusable scroll region; page content stays within the viewport |
 
 Forty-seven tests cover the rule truth tables, same-component correlation, serial
 boundaries and types, inventory completeness, document selection, changed evidence,

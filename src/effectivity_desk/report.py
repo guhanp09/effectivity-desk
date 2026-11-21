@@ -14,7 +14,10 @@ from effectivity_desk.rules import evaluate, evidence_stamp, select_revision
 
 
 def table(rows, fields):
-    result = "<div class='scroll'><table><thead><tr>"
+    region = escape(" / ".join(label for _, label in fields[:2]), quote=True)
+    result = (
+        f"<div class='scroll' role='region' aria-label='{region}' tabindex='0'><table><thead><tr>"
+    )
     result += "".join(f"<th scope='col'>{escape(label)}</th>" for _, label in fields)
     result += "</tr></thead><tbody>"
     for row in rows:
