@@ -18,9 +18,11 @@ future revisions, and allowing financial convenience to override technical gates
 | Quote missing or technical gate unresolved | No financial implementation candidate |
 | Warranty packet complete | Candidate for contract review only; no recovery booked |
 
-Forty-one tests cover the rule truth tables, same-component correlation, serial
+Forty-seven tests cover the rule truth tables, same-component correlation, serial
 boundaries and types, inventory completeness, document selection, changed evidence,
 source-specific AD gaps, missing costs, completion timing and warranty state.
+The manufacturer case adds lower/upper bounds, adjacent group transitions and
+missing-serial checks against the captured public bulletin table.
 Artifact checks verify the source snapshot checksum, unresolved actual bulletin
 membership, report totals and absence of approval/recovery claims.
 

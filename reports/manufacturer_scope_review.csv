@@ -1,0 +1,13 @@
+case,captured_group,state,reason
+ILLUSTRATION-A-lower,A,MATCH,asset.model: matches; asset.airframe_serial: matches
+ILLUSTRATION-A-lower,B,NO_MATCH,asset.model: matches; asset.airframe_serial: outside known scope
+ILLUSTRATION-A-upper,A,MATCH,asset.model: matches; asset.airframe_serial: matches
+ILLUSTRATION-A-upper,B,NO_MATCH,asset.model: matches; asset.airframe_serial: outside known scope
+ILLUSTRATION-B-lower,A,NO_MATCH,asset.model: matches; asset.airframe_serial: outside known scope
+ILLUSTRATION-B-lower,B,MATCH,asset.model: matches; asset.airframe_serial: matches
+ILLUSTRATION-B-upper,A,NO_MATCH,asset.model: matches; asset.airframe_serial: outside known scope
+ILLUSTRATION-B-upper,B,MATCH,asset.model: matches; asset.airframe_serial: matches
+ILLUSTRATION-missing,A,UNKNOWN,asset.model: matches; asset.airframe_serial: missing
+ILLUSTRATION-missing,B,UNKNOWN,asset.model: matches; asset.airframe_serial: missing
+ILLUSTRATION-after-captured-ranges,A,NO_MATCH,asset.model: matches; asset.airframe_serial: outside known scope
+ILLUSTRATION-after-captured-ranges,B,NO_MATCH,asset.model: matches; asset.airframe_serial: outside known scope

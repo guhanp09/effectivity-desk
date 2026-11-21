@@ -78,6 +78,19 @@ def build(root, as_of):
                     "reason": "; ".join(finding.reasons),
                 }
             )
+    bulletin = json.loads((data / "piper_sb1390_scope.json").read_text())
+    bulletin_reviews = []
+    for case in bulletin["cases"]:
+        for group, rule in bulletin["rules"].items():
+            finding = evaluate(rule, case)
+            bulletin_reviews.append(
+                {
+                    "case": case["id"],
+                    "captured_group": group,
+                    "state": finding.state.value,
+                    "reason": "; ".join(finding.reasons),
+                }
+            )
     planning = compare_options(synthetic["planning"])
     warranties = [
         {"case": record["id"], **warranty_queue(record)} for record in synthetic["warranty"]
@@ -89,6 +102,8 @@ def build(root, as_of):
         "synthetic_reviews": reviews,
         "state_counts": dict(Counter(r["state"] for r in reviews)),
         "public_ad_case_reviews": public_reviews,
+        "manufacturer_bulletin": bulletin,
+        "manufacturer_scope_reviews": bulletin_reviews,
         "synthetic_planning": planning,
         "synthetic_warranty": warranties,
         "approval": None,
@@ -97,6 +112,7 @@ def build(root, as_of):
     (output / "review.json").write_text(json.dumps(result, indent=2) + "\n")
     csv_file(output / "synthetic_effectivity.csv", reviews)
     csv_file(output / "public_ad_scope_review.csv", public_reviews)
+    csv_file(output / "manufacturer_scope_review.csv", bulletin_reviews)
     csv_file(output / "synthetic_options.csv", planning["options"])
     csv_file(
         output / "synthetic_warranty.csv",
@@ -119,6 +135,15 @@ def build(root, as_of):
             ("reason", "Evidence trail"),
         ],
     )
+    bulletin_table = table(
+        bulletin_reviews,
+        [
+            ("case", "Fictitious configuration"),
+            ("captured_group", "Captured SB group"),
+            ("state", "Scope state"),
+        ],
+    )
+    bulletin_notes = "".join("<li>" + escape(note) + "</li>" for note in bulletin["review_notes"])
     costs = table(
         planning["options"],
         [
@@ -164,6 +189,11 @@ The examples below use fictitious configurations. Model identity alone cannot es
 This is a review of the captured AD, not a statement that no later AD, AMOC or manufacturer revision exists.</p>
 <a href="{escape(source["url"], quote=True)}">Read the public AD</a> ·
 <a href="public_ad_scope_review.csv">Scope review CSV</a>
+<h2>Manufacturer bulletin: focused Piper SB 1390 review</h2>
+<p>{escape(bulletin["scope"])} All configurations below are fictitious.</p>
+{bulletin_table}<ul>{bulletin_notes}</ul>
+<p><a href="{escape(bulletin["url"], quote=True)}">Manufacturer source PDF</a> ·
+<a href="manufacturer_scope_review.csv">Captured-scope review CSV</a></p>
 <h2>Synthetic Service Bulletin and installed-part cases</h2>
 <p>Invented SB-SIM-PUMP-01, revision {selected["revision"]}, selected from the supplied corpus as of {as_of}.
 Rules combine model, airframe serial range and a single component's part number, serial and position.

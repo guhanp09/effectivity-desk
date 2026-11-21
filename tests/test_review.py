@@ -175,3 +175,20 @@ def test_warranty_never_books_assumed_recovery():
         "outside supplied terms; review exceptions",
     ]
     assert all(r["recovery_usd"] is None for r in results)
+
+
+@pytest.mark.parametrize(
+    "case_index,expected",
+    [
+        (0, (State.MATCH, State.NO_MATCH)),
+        (1, (State.MATCH, State.NO_MATCH)),
+        (2, (State.NO_MATCH, State.MATCH)),
+        (3, (State.NO_MATCH, State.MATCH)),
+        (4, (State.UNKNOWN, State.UNKNOWN)),
+        (5, (State.NO_MATCH, State.NO_MATCH)),
+    ],
+)
+def test_captured_manufacturer_scope_boundaries_and_group_transition(case_index, expected):
+    source = json.loads((ROOT / "data/piper_sb1390_scope.json").read_text())
+    case = source["cases"][case_index]
+    assert tuple(evaluate(source["rules"][group], case).state for group in ["A", "B"]) == expected

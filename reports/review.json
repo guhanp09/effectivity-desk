@@ -300,6 +300,166 @@
       "reason": "asset.proposed_part: missing; asset.same_location_previously_replaced_by_new_part: missing"
     }
   ],
+  "manufacturer_bulletin": {
+    "url": "https://s3.amazonaws.com/pipercrm/Solution/20900/SB_1390.pdf",
+    "sha256": "4c43dd450c1e19d3513ade88660f4027cc57ca209ca1647474cfa6ecfb546bfc",
+    "retrieved_at_utc": "2026-11-21T14:29:22.528964+00:00",
+    "title": "Piper SB 1390 \u2014 focused PA-46-350P scope study",
+    "document_date": "2023-07-18",
+    "effective_date": "2023-07-20",
+    "ata_jasc": "3230",
+    "scope": "Captured single-model subcase only; other models and current document currency are not determined. Source PDF is linked, not redistributed.",
+    "rules": {
+      "A": {
+        "all": [
+          {
+            "in": {
+              "model": [
+                "PA-46-350P"
+              ]
+            }
+          },
+          {
+            "range": {
+              "airframe_serial": [
+                4622001,
+                4636800
+              ]
+            }
+          }
+        ]
+      },
+      "B": {
+        "all": [
+          {
+            "in": {
+              "model": [
+                "PA-46-350P"
+              ]
+            }
+          },
+          {
+            "range": {
+              "airframe_serial": [
+                4636801,
+                4636805
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "cases": [
+      {
+        "id": "ILLUSTRATION-A-lower",
+        "model": "PA-46-350P",
+        "airframe_serial": 4622001
+      },
+      {
+        "id": "ILLUSTRATION-A-upper",
+        "model": "PA-46-350P",
+        "airframe_serial": 4636800
+      },
+      {
+        "id": "ILLUSTRATION-B-lower",
+        "model": "PA-46-350P",
+        "airframe_serial": 4636801
+      },
+      {
+        "id": "ILLUSTRATION-B-upper",
+        "model": "PA-46-350P",
+        "airframe_serial": 4636805
+      },
+      {
+        "id": "ILLUSTRATION-missing",
+        "model": "PA-46-350P",
+        "airframe_serial": null
+      },
+      {
+        "id": "ILLUSTRATION-after-captured-ranges",
+        "model": "PA-46-350P",
+        "airframe_serial": 4636806
+      }
+    ],
+    "review_notes": [
+      "Group A routing still requires the specified installed-spring and purchase-history evidence; scope match is not completed compliance.",
+      "Manufacturer priority, technical approval and historical participation language do not establish current legal applicability, aircraft release or warranty entitlement."
+    ]
+  },
+  "manufacturer_scope_reviews": [
+    {
+      "case": "ILLUSTRATION-A-lower",
+      "captured_group": "A",
+      "state": "MATCH",
+      "reason": "asset.model: matches; asset.airframe_serial: matches"
+    },
+    {
+      "case": "ILLUSTRATION-A-lower",
+      "captured_group": "B",
+      "state": "NO_MATCH",
+      "reason": "asset.model: matches; asset.airframe_serial: outside known scope"
+    },
+    {
+      "case": "ILLUSTRATION-A-upper",
+      "captured_group": "A",
+      "state": "MATCH",
+      "reason": "asset.model: matches; asset.airframe_serial: matches"
+    },
+    {
+      "case": "ILLUSTRATION-A-upper",
+      "captured_group": "B",
+      "state": "NO_MATCH",
+      "reason": "asset.model: matches; asset.airframe_serial: outside known scope"
+    },
+    {
+      "case": "ILLUSTRATION-B-lower",
+      "captured_group": "A",
+      "state": "NO_MATCH",
+      "reason": "asset.model: matches; asset.airframe_serial: outside known scope"
+    },
+    {
+      "case": "ILLUSTRATION-B-lower",
+      "captured_group": "B",
+      "state": "MATCH",
+      "reason": "asset.model: matches; asset.airframe_serial: matches"
+    },
+    {
+      "case": "ILLUSTRATION-B-upper",
+      "captured_group": "A",
+      "state": "NO_MATCH",
+      "reason": "asset.model: matches; asset.airframe_serial: outside known scope"
+    },
+    {
+      "case": "ILLUSTRATION-B-upper",
+      "captured_group": "B",
+      "state": "MATCH",
+      "reason": "asset.model: matches; asset.airframe_serial: matches"
+    },
+    {
+      "case": "ILLUSTRATION-missing",
+      "captured_group": "A",
+      "state": "UNKNOWN",
+      "reason": "asset.model: matches; asset.airframe_serial: missing"
+    },
+    {
+      "case": "ILLUSTRATION-missing",
+      "captured_group": "B",
+      "state": "UNKNOWN",
+      "reason": "asset.model: matches; asset.airframe_serial: missing"
+    },
+    {
+      "case": "ILLUSTRATION-after-captured-ranges",
+      "captured_group": "A",
+      "state": "NO_MATCH",
+      "reason": "asset.model: matches; asset.airframe_serial: outside known scope"
+    },
+    {
+      "case": "ILLUSTRATION-after-captured-ranges",
+      "captured_group": "B",
+      "state": "NO_MATCH",
+      "reason": "asset.model: matches; asset.airframe_serial: outside known scope"
+    }
+  ],
   "synthetic_planning": {
     "options": [
       {

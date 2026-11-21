@@ -2,13 +2,15 @@
   "as_of": "2026-11-21",
   "inputs": {
     "ad_2026_09_01.json": "4f505e759717391ca026b5daf216ba0e2e2a59e8bc078931288f828e5890c120",
+    "piper_sb1390_scope.json": "0ed79057640c5c9671fe2e3696726e244473f6d79307588cbeafdacbd205c1e7",
     "sources/ad-2026-09-01.pdf": "4006799c9fb5108e66fc8ca0ea3dae99e76a7c65f01ef3d7043be7b3e0e02dce",
     "synthetic_review.json": "21670c16a819f2791fb222411616a9692310ee37eae244fa38541636fbeb2931"
   },
   "outputs": {
-    "index.html": "c4c0aab93b246ee2bc464071fee6f90fd2b5dd093eab78f1d445bbea2ef5e4db",
+    "index.html": "ec27f08f544cddce14dfbc227db0aa4ae7094d71c1cc47889082dbacd62d6ff7",
+    "manufacturer_scope_review.csv": "25c45d08ebf853b02c1f7e1e0a30b01f235742134580bcc73fef734b85eb4101",
     "public_ad_scope_review.csv": "0d43e85c16042a6e6a2596b0806149ab98ebd227359ab274f1559082bc9d6d5d",
-    "review.json": "2edbd4ca28b3bbfa7362dba1ff6b1a84d55e5a6baf4ad7aadd20cd37afaa217f",
+    "review.json": "ae5b947af1a358ddb22159ab0d4400957d0fe7cdc64d8bcaaa6a78b5f2f5a368",
     "synthetic_effectivity.csv": "6e90a605022fdf42edbf2c81ae8dfd4a7219011bc524e11fac80680fc21f7065",
     "synthetic_options.csv": "9c6525228619fc029d69b27a4b1023bfb9cd4b1ee95eee3969407a5a33c97a40",
     "synthetic_warranty.csv": "24ec9891e13cbd3458c5ae62b2421f2ef593c5bd7a0060edfa9a6b85d4c78c9d"

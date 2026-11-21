@@ -12,6 +12,10 @@ couplings. The AD is available; the complete incorporated manufacturer Requireme
 Bulletins are not. Consequently the examples do not infer manufacturer effectivity,
 due dates or compliance from model names alone.
 
+A separate [Piper SB 1390 source study](data/piper_sb1390_scope.json) tests captured
+model/serial group boundaries. Its configurations are fictitious; the manufacturer
+PDF is linked rather than redistributed.
+
 Separate invented SB/configuration cases exercise model, airframe serial, installed
 part number, component serial and position. Nine cases produce **one match, four
 known exclusions and four unresolved cases**. Component conditions must match the
@@ -61,5 +65,6 @@ The public source and invented planning assumptions are identified in every outp
 [Quality review](docs/review-findings.md) ·
 [Machine-readable output](reports/review.json)
 
-MIT license applies to repository code. The public Federal Register source retains
+MIT license applies to repository code. Manufacturer material retains its copyright.
+The public Federal Register source retains
 its attribution; proprietary incorporated Boeing documents are not redistributed.
